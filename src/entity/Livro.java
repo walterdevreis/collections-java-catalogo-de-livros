@@ -1,19 +1,14 @@
 package entity;
 
-import java.sql.Date;
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-
 public class Livro {
 
     private String titulo;
     private String autor;
-    private LocalDate anoDePublicacao;
+    private int anoDePublicacao;
 
     public Livro(){}
 
-    public Livro(String titulo, String autor, LocalDate anoDePublicacao) {
+    public Livro(String titulo, String autor, int anoDePublicacao) {
         this.titulo = titulo;
         this.autor = autor;
         this.anoDePublicacao = anoDePublicacao;
@@ -27,16 +22,15 @@ public class Livro {
         return autor;
     }
 
-    public LocalDate getAnoDePublicacao() {
+    public int getAnoDePublicacao() {
         return anoDePublicacao;
     }
 
     @Override
     public String toString() {
-        return "Livro{" +
-                "titulo='" + titulo + '\'' +
-                ", autor='" + autor + '\'' +
-                ", anoDePublicacao=" + getAnoDePublicacao()+
-                '}';
+        return "Título do Livro: " +
+                titulo + '\n' +
+                "Autor do Livro: " + autor + '\n' +
+                "Ano de publicação do Livro: " + getAnoDePublicacao() + "\n";
     }
 }
